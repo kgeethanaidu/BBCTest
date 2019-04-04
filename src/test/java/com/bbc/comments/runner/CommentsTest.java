@@ -12,7 +12,7 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(features = "classpath:features/comment.feature",
         glue = {"com.bbc.comments.steps"},
         format = {"html:target/comment_report"},
-        tags = {"@comments"})
+        tags = {"@comments","~@manual"})
 public class CommentsTest {
 
     @AfterClass
