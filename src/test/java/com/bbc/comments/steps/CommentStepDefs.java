@@ -57,7 +57,7 @@ public class CommentStepDefs extends CommonSteps   {
 
     }
 
-    @When("^I do to URL \"([^\"]*)\"$")
+    @When("^I go to URL \"([^\"]*)\"$")
     public void iDoToURL(String url) throws Throwable {
         driver.get(url);
     }
