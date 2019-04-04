@@ -39,7 +39,6 @@ public class CommentStepDefs extends CommonSteps   {
         signinPage.signIn(uName,pwd);
     }
 
-
     @When("^I click on first new headlines link to goto the artical$")
     public void iClickOnFirstNewHeadlinesLinkToGotTheArtical() {
         List<WebElement> headLines=homePage.getHeadlinesList();
@@ -65,7 +64,7 @@ public class CommentStepDefs extends CommonSteps   {
 
     @And("^I Logout from the account$")
     public void iLogoutFromTheAccount() {
-        articalPage.clickonusername();
+        articalPage.signOut();
 
     }
 
