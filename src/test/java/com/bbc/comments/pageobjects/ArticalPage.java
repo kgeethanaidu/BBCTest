@@ -1,5 +1,6 @@
 package com.bbc.comments.pageobjects;
 
+import com.bbc.comments.steps.CommonSteps;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -60,7 +61,7 @@ public class ArticalPage extends BasePage {
             return true;
         }
         try {
-            driver.switchTo().frame(1);
+            driver.switchTo().frame(0);
             driver.switchTo().defaultContent();
             if(getCommentBox().isEnabled())
             {
@@ -73,10 +74,12 @@ public class ArticalPage extends BasePage {
         return true;
     }
 
-    public void clickonusername()
+    public void signOut()
     {
         getUserAccount().click();
+        CommonSteps.explecitWait(signout);
         getSignout().click();
     }
+
 
 }
